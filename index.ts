@@ -29,9 +29,21 @@ userData.forEach((user: User): void => {
   const lastPaymentDate: typeof EasyDate = new EasyDate(user.lastpayment)
   const timeAgo: string = new EasyDate().when(lastPaymentDate)
   console.log(`Last Payment: ${timeAgo}`)
+
+  // Challenge 4
+  console.log(formatPhoneNumer(user.phone))
 })
 
 // Uppercase the first letter of a string
 function capitalize(str: string): string {
   return `${str[0].toUpperCase()}${str.slice(1)}`
+}
+
+// Takes a 10 digit phone number string and formats it into (000) 000-0000 format
+function formatPhoneNumer(str: string): string {
+  const AreaCode = str.substring(0, 3)
+  const Prefix = str.substring(3, 6)
+  const Subscriber = str.substring(6, 10)
+
+  return `(${AreaCode}) ${Prefix}-${Subscriber}`
 }
