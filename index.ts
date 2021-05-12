@@ -24,6 +24,11 @@ userData.forEach((user: User): void => {
   // Challenge 2
   const purchasedDate: typeof EasyDate = new EasyDate(user.purchased)
   console.log(purchasedDate.format('%B %D, %Y'))
+
+  // Challenge 3
+  const lastPaymentDate: typeof EasyDate = new EasyDate(user.lastpayment)
+  const timeAgo: string = new EasyDate().when(lastPaymentDate)
+  console.log(`Last Payment: ${timeAgo}`)
 })
 
 // Uppercase the first letter of a string

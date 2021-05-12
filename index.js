@@ -8,6 +8,10 @@ userData.forEach(function (user) {
     // Challenge 2
     var purchasedDate = new EasyDate(user.purchased);
     console.log(purchasedDate.format('%B %D, %Y'));
+    // Challenge 3
+    var lastPaymentDate = new EasyDate(user.lastpayment);
+    var timeAgo = new EasyDate().when(lastPaymentDate);
+    console.log("Last Payment: " + timeAgo);
 });
 // Uppercase the first letter of a string
 function capitalize(str) {
