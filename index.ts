@@ -80,6 +80,6 @@ function formatPhoneNumer(phoneNum: string): string {
   return `(${AreaCode}) ${Prefix}-${Subscriber}`
 }
 
-printUserData(userData)
+// printUserData(userData)
 
 module.exports = { formatPhoneNumer, printUserData, capitalize, titleCase }

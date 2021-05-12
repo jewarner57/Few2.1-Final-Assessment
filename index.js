@@ -51,5 +51,5 @@ function formatPhoneNumer(phoneNum) {
     var Subscriber = phoneNum.substring(6, 10);
     return "(" + AreaCode + ") " + Prefix + "-" + Subscriber;
 }
-printUserData(userData);
+// printUserData(userData)
 module.exports = { formatPhoneNumer: formatPhoneNumer, printUserData: printUserData, capitalize: capitalize, titleCase: titleCase };

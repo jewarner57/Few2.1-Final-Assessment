@@ -12,6 +12,11 @@ test('Various Correct Numbers', () => {
   expect(index.formatPhoneNumer('6788675309')).toBe('(678) 867-5309')
 })
 
+test('Badly formatted numbers', () => {
+  expect(index.formatPhoneNumer('248-4345-508')).toBe('Phone number: 248-4345-508 is not valid.')
+  expect(index.formatPhoneNumer('(678) 867-5309')).toBe('Phone number: (678) 867-5309 is not valid.')
+})
+
 test('Empty String', () => {
   expect(index.formatPhoneNumer('')).toBe('Phone number:  is not valid.')
 })
