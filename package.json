@@ -24,5 +24,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "@jewarner57/easy-as-string": "^1.1.2",
+    "@jewarner57/easydate": "^1.1.4"
+  }
 }
